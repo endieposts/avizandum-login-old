@@ -10,18 +10,18 @@ import java.util.TimeZone;
 
 @SpringBootApplication
 @EntityScan(basePackageClasses = {
-		LoginApplication.class,
+		Application.class,
 		Jsr310JpaConverters.class
 })
-public class LoginApplication {
+public class Application {
 
 	@PostConstruct
 	void init() {
 		TimeZone.setDefault(TimeZone.getTimeZone("UTC"));
 	}
-	
+
 	public static void main(String[] args) {
-		SpringApplication.run(LoginApplication.class, args);
+		SpringApplication.run(Application.class, args);
 	}
 
 
